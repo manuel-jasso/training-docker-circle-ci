@@ -1,0 +1,11 @@
+machine:
+  services:
+    - docker
+
+dependencies:
+  override:
+    - docker build -t manueljasso/sample-node .
+
+test:
+  override:
+    - docker run manueljasso/sample-node npm test
