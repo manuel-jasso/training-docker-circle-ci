@@ -1,8 +1,7 @@
 #!/bin/bash
-docker build -t manueljasso/sample-node .
 docker push manueljasso/sample-node
 
-ssh deploy@159.203.127.59 << EOF
+ssh deploy@138.197.193.37 << EOF
 docker pull manueljasso/sample-node:latest
 docker stop web || true
 docker rm web || true
