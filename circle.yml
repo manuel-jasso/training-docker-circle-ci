@@ -9,6 +9,7 @@ dependencies:
 test:
   override:
     - docker run manueljasso/sample-node npm test
+
 deployment:
   production:
     branch: master
